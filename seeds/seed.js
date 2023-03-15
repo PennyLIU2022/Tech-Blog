@@ -12,28 +12,37 @@ const commentData = require('./comment-seeds.json');
 const seedAllData = async ()=>{
     await sequelize.sync({ force: true });
 
-    const users = await User.bulkCreate(userData, {
+    await User.bulkCreate(userData, {
         individualHooks: true,
         returning: true,
     });
 
-    for (const blog of blogData){
-        await Blog.create({
-            ...blog,
-            user_id: users[Math.floor(math.random()*users.length)].id,
-        })
-    };
+    // console.log(users);
+    // let newBlogData=[];
+    // for (const blog of blogData){
+    //     newBlogData.push({...blog, user_id:users[Math.floor(Math.random()*users.length)].id})
+    // };
 
-    for (const comment of commentData){
-        await Comment.create({
-            ...comment,
-            user_id: users[Math.floor(math.random()*users.length)].id,
-            // const blogs = Blog.bulkCreate(blogData),
-            blog_id: blog[Math.floor(math.randome()*blog.length)].id //  **** need blog to be an array
-        })
-    };
+    await Blog.bulkCreate(blogData, { 
+        individualHooks: true,
+        returning: true,
+    });
+    // console.log(blogs);
 
-    process.exit(0); //exist once found the correct user_id and blog_id?
+    await Comment.bulkCreate(commentData, { 
+        individualHooks: true,
+        returning: true,
+    });
+    // for (const comment of commentData){
+    //     await Comment.create({
+    //         ...comment,
+    //         user_id: users[Math.floor(Math.random()*users.length)].id,
+    //         // const blogs = Blog.bulkCreate(blogData),
+    //         blog_id: blogs[Math.floor(Math.random()*blogs.length)].id //  **** need blog to be an array
+    //     })
+    // };
+
+    process.exit(0);
 };
 
 seedAllData();

@@ -1,0 +1,27 @@
+
+Basic setup of server.js
+
+***** DATAASE SECTION *****
+connection.js inside config folder
+schema , Models & seeds files
+
+
+******* BACKEND (ROUTES+COONTROLLERS+APIS)
+Routes - Homeroutes (Load frontend pages)
+       - API Routes (Communicates with the controller to get the data from the database)
+
+********* CONTROLLERS ******
+- Usually perfoems actual CRUD using the models and brings/store the data as requested
+- It is the middleman between routes and models  , routes ---> Controllers ---> Models
+
+
+*********** Handlerbars ********
+Will have the HTML for the frontend
+
+********* Patrials and Helpers *******
+Will be integrated inside the Handlerbars
+
+
+*****************************************************************   <<--------------------------- *********************************     
+  
+Handlebars (handlebar+partial+helpers) --> server.js --> routes(API/Homeroutes)--> Controllers --> Models(Schema+seeds) --> Connection.js --> Database

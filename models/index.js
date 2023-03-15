@@ -2,7 +2,6 @@
 const User = require('./User');
 const Blog = require('./Blog');
 const Comment = require('./Comment');
-const BlogComment = require('./BlogComment');
 
 // blog belongs to user
 Blog.belongsTo(User, {
@@ -42,5 +41,4 @@ module.exports = {
     User,
     Blog,
     Comment,
-    //BlogComment,
 };
