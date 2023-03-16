@@ -29,7 +29,7 @@ SO THAT I can publish articles, blog posts, and my thoughts and opinions
     ```
 
 ## Heroku Link
-This application is deployed to [Heroku](https://drive.google.com/file/d/1rkiYIvonCxWtNLU7Kiud4y_S8WYeOkRw/view)
+This application is deployed to [Heroku](https://tech-blog-s.herokuapp.com/)
 
 ## Application Screenshot
 This is the homepage, it shows all the posts including the post title and the date created.
@@ -38,7 +38,10 @@ This is the homepage, it shows all the posts including the post title and the da
 When you click the post title, it will bring you to the single post page, it shows the post information and comments. You can make a comment while logged in.
 ![Application Screenshot 2](public/images/SingleBlog.png)
 
-When you click dashboard, it bring you to the page below. It shows all your posts, you can click "+ New Post" to add a new post. 
+After you log in or sign up, it will bring you to the dashboard page directly.
+![Application Screenshot 3-1](public/images/login.png)
+
+You can also click navigation link of "dashboard", it will bring you to the page. It shows all your posts, you can click "+ New Post" to add a new post. 
 ![Application Screenshot 3](public/images/Dashboard.png)
 
 Also, you can click the post title, it brings you to another page, where you can delete post or update the post. 
