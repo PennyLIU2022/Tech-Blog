@@ -29,7 +29,7 @@ SO THAT I can publish articles, blog posts, and my thoughts and opinions
     ```
 
 ## Heroku Link
-This application is deployed to [Heroku](https://drive.google.com/file/d/1rkiYIvonCxWtNLU7Kiud4y_S8WYeOkRw/view)
+This application is deployed to [Heroku](https://tech-blog-s.herokuapp.com/)
 
 ## Application Screenshot
 This is the homepage, it shows all the posts including the post title and the date created.
