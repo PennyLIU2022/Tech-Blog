@@ -34,7 +34,7 @@ router.get('/', withAuth, async (req, res) => {
      // pass serialized data and session flag into template
      res.render('dashboard', {
         blogs,
-        logged_in: req.session.logged_in
+        logged_in: true
      });
 
     } catch (err){
